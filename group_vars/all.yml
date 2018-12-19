@@ -16,7 +16,7 @@ install_temp_dir: /tmp/ansible-install
 install_dir: /opt
 
 # Common packages
-install_java: True
+install_java: False
 python_version: 2
 
 security:
