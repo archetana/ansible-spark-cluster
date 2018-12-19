@@ -13,11 +13,10 @@
      msg: "Downloading {{ common.java_download }}"
 
 - name: download java sdk rpm
-  get_url:
-     headers:
-       Cookie: "oraclelicense=accept-securebackup-cookie"
-     url: "{{ common.java_download }}"
-     dest: "{{ install_temp_dir }}/{{ java_install_file }}"
+  command : "wget --no-cookies --no-check-certificate --header 'Cookie: gpw_e24=http%3a%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie;' {{java_download}}"
+  
+- name: Move rpm
+    command: "mv {{ java_install_file }}  {{ install_temp_dir }}/{{ java_install_file }}"  
 
 #- name: download java sdk rpm
 #  shell: "cd {{ install_temp_dir }} && curl -LO {{ common.java_download }} -H 'Cookie: oraclelicense=accept-securebackup-cookie'"
