@@ -3,14 +3,14 @@
   file: path=/opt/src state=directory recurse=yes
 
 - name: Create lib dir
-  file: path={{sbt_lib_path_target}} state=directory recurse=yes
+  file: path={{common.sbt_lib_path_target}} state=directory recurse=yes
 
-- name: Download sbt v{{sbt_version}}
-  get_url: url={{sbt_download_url}} 
-    dest=/opt/src/{{sbt_archive_file}}
+- name: Download sbt v{{common.sbt_version}}
+  get_url: url={{common.sbt_download_url}} 
+    dest=/opt/src/{{common.sbt_archive_file}}
 
 - name: Unpack sbt
-  unarchive: src=/opt/src/{{sbt_archive_file}} dest={{sbt_lib_path_target}} copy=no
+  unarchive: src=/opt/src/{{common.sbt_archive_file}} dest={{common.sbt_lib_path_target}} copy=no
 
 - name: Link sbt
-  file: state=link src={{sbt_lib_path_target}}/sbt/bin/sbt dest={{sbt_link_target}}
+  file: state=link src={{common.sbt_lib_path_target}}/sbt/bin/sbt dest={{common.sbt_link_target}}
