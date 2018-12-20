@@ -3,13 +3,8 @@ common:
   java_home: "/usr/java/jdk1.8.0_191-amd64"
   java_download: "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.rpm"
   java_jce_download: "http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip"
-
-  sbt_playbook_version: "0.2.0"
-  sbt_version: "0.13.7"
-  sbt_archive_name: "sbt-{{sbt_version}}"
-  sbt_archive_file: "{{sbt_archive_name}}.tgz"
-  sbt_download_url: "https://dl.bintray.com/sbt/native-packages/sbt/{{sbt_version}}/{{sbt_archive_file}}"
-  
+  sbt_archive_file: "sbt-0.13.7.tgz"
+  sbt_download_url: "https://dl.bintray.com/sbt/native-packages/sbt/0.13.7/sbt-0.13.7.tgz"  
   sbt_lib_path: "/usr/share/sbt"
-  sbt_lib_path_target: "{{sbt_lib_path}}/{{sbt_version}}"
+  sbt_lib_path_target: "/usr/share/sbt/0.13.7"
   sbt_link_target: "/usr/bin/sbt"
