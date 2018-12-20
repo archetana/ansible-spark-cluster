@@ -8,6 +8,7 @@
     - role: hdfs
     - role: spark
     - role: spark-cluster-admin
+    - role: sjs
 #    - role: elasticsearch
 
 

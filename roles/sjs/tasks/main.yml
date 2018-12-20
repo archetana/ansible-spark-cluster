@@ -1,4 +1,4 @@
 - name: git clone spark job server
   git:
-    repo: {{sjs.repo}}
-    dest: {{sjs.install_dir}}
+    repo: "{{sjs.repo}}"
+    dest: "{{sjs.install_dir}}"
