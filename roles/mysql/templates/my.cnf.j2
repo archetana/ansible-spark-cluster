@@ -1,0 +1,20 @@
+# {{ ansible_managed }}
+
+{% if mysql_global_variables.include_dirs is defined and mysql_global_variables.include_dirs|length > 0 %}
+# * IMPORTANT: Additional settings that can override those from this file!
+#   The files must end with '.cnf', otherwise they'll be ignored.
+#
+{% for include_dir in mysql_global_variables.include_dirs %}
+!includedir {{ include_dir }}
+{% endfor %}
+{% endif %}
+
+{% if mysql_global_variables.groups is defined and  mysql_global_variables.groups.items()|length > 0 %}
+{% for group_name, options in mysql_global_variables.groups.items() %}
+[{{ group_name }}]
+{% for name, value in options.items() %}
+{{ name }} = {{ value }}
+{% endfor %}
+
+{% endfor %}
+{% endif %}

@@ -9,6 +9,6 @@
 #    - role: spark
 #    - role: spark-cluster-admin
 #    - role: sjs
-#    - role: elasticsearch
-    - role: mongodb
+#    - role: mongodb
+    - role: mysql
 

@@ -8,6 +8,10 @@
     enabled: yes
     gpgkey: https://www.mongodb.org/static/pgp/server-{{ mongodb.mongodb_ver }}.asc
     file: mongodb-org-{{ mongodb.mongodb_ver }}
+<<<<<<< HEAD
+=======
+  when: mongodb_ver|float() >= 3.0
+>>>>>>> 546076c2d0f44d87f841ff8358b0655e8b06e9d1
 
 - name: 'Install mongodb-org'
   package:
