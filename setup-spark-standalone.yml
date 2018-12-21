@@ -4,11 +4,11 @@
   roles:
     - role: common
     - role: zookeeper
-    - role: kafka
-    - role: hdfs
-    - role: spark
-    - role: spark-cluster-admin
-    - role: sjs
+#    - role: kafka
+#    - role: hdfs
+#    - role: spark
+#    - role: spark-cluster-admin
+#    - role: sjs
 #    - role: elasticsearch
-
+    - role: mongodb
 
