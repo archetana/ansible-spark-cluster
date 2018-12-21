@@ -9,6 +9,7 @@
     - role: spark
     - role: spark-cluster-admin
     - role: sjs
+    - role: mongodb
 #    - role: elasticsearch
 
 
