@@ -1,0 +1,5 @@
+node_version: "10.14.2"
+node_archive_file: "node-v10.14.2-linux-x64.tar"
+node_download_url: "https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-x64.tar.xz"  
+node_path: "/usr/lib/node/10.14.2"
+

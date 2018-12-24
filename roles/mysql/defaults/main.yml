@@ -4,7 +4,7 @@ env:
 
 mysql_pkgs:
   - libselinux-python
-  - mysql-server
+  - mariadb-server
   - MySQL-python
 
 mysql_service: mysqld

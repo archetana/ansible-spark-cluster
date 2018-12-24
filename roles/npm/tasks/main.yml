@@ -1,0 +1,19 @@
+- name: Download node{{node_version}}
+  get_url: url={{node_download_url}} dest=/opt/src/{{node_archive_file}}
+
+- name: Create node directory
+  shell: mkdir /usr/lib/node
+
+- name: Unpack node
+  shell: tar -xJvf /opt/src/{{node_archive_file}} -C /usr/lib/node
+
+- name: rename directory
+  command : "mv /usr/lib/node/node-v{{node_version}}-linux-x64 /usr/lib/node/{{node_version}}"
+
+# Environment setup.
+- name: add node path
+  template:
+    src: node-profile.sh.j2
+    dest: /etc/profile.d/node-profile.sh
+    mode: 0644
+
