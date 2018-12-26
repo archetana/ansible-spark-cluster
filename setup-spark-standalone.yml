@@ -2,14 +2,15 @@
   hosts: all
   remote_user: root
   roles:
-#    - role: common
-#    - role: zookeeper
-#    - role: kafka
-#    - role: hdfs
-#    - role: spark
-#    - role: spark-cluster-admin
-#    - role: sjs
-#    - role: mongodb
+    - role: common
+    - role: zookeeper
+    - role: kafka
+    - role: hdfs
+    - role: spark
+    - role: spark-cluster-admin
+    - role: sjs
+    - role: mongodb
 #    - role: mysql
     - role: npm
-
+    - role: grafana
+    - role: anaconda

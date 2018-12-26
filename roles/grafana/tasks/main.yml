@@ -1,0 +1,2 @@
+- name: install grafana
+  shell: yum install {{grafana_download_url}}
