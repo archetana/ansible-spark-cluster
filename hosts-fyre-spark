@@ -1,6 +1,7 @@
 
 [master]
-omsappagentsitvm.softlayer.com   ansible_host=10.136.175.203   ansible_host_private=169.51.38.74  ansible_host_id=1
+omsappagentsitvm   ansible_host=10.136.175.203   ansible_host_private=169.51.38.74  ansible_host_id=1
 
 [nodes]
+omsappagentsitvm
 

@@ -3,14 +3,14 @@
   remote_user: root
   roles:
     - role: common
-    - role: zookeeper
-    - role: kafka
-    - role: hdfs
-    - role: spark
-    - role: spark-cluster-admin
-    - role: sjs
-    - role: mongodb
-#    - role: mysql
-    - role: npm
-    - role: grafana
-    - role: anaconda
+    - { role: zookeeper, when: install_zookeeper == True }
+    - { role: kafka, when: install_kafka == True }
+    - { role: hdfs, when: install_hdfs == True }
+    - { role: spark, when: install_spark == True }
+    - { role: spark-cluster-admin, when: install_spark == True }
+    - { role: sjs, when: install_sparkjobserver == True }
+    - { role: mongodb, when: install_mongodb == True }
+    - { role: mysql, when: install_mysql == True }
+    - { role: npm, when: install_node == True }
+    - { role: grafana, when: install_grafana == True }
+    - { role: anaconda, when: install_anaconda == True }

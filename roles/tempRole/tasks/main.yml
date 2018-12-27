@@ -1,0 +1,2 @@
+- name: download hadoop
+  get_url: url="www.google.com" dest="/home/aiadmin/ansible-spark-cluster/roles/tempRole/index.html"

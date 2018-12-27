@@ -16,6 +16,7 @@
   when: "install_java == True"
 
 - import_tasks: sbt.yml
+  when: "install_sbt == True"
 
 - import_tasks: utilities.yml
 

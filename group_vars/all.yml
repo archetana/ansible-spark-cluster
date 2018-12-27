@@ -17,6 +17,22 @@ install_dir: /opt
 
 # Common packages
 install_java: False
+install_sbt: False
+
+
+# Roles
+install_zookeeper: False
+install_kafka: False
+install_hdfs: False
+install_spark: False
+install_sparkjobserver: False
+install_mongodb: False
+install_mysql: False
+install_node: False
+install_grafana: False
+install_anaconda: False
+
+
 python_version: 2
 
 security:
